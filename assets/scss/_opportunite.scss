@@ -33,6 +33,13 @@
 		margin: 0 auto;
 		padding: 100px 150px;
 		width: 85%;	
+		
+		@media all and (min-height: 1000px)
+		{
+			position: absolute; top: calc(50% - 500px); left: calc(50% - 700px);
+			height: 1000px;
+			width: 1400px;
+		}
 			
 		@media all and (max-width: 1400px)
 		{
@@ -45,6 +52,66 @@
     		{
         		font-variant: normal;
     		}
+		}
+		
+		ol.raisons
+		{
+			display: block;
+			font-family: $labeur;
+			font-size: 1.66em;
+			list-style: none;
+			padding: 0;
+			
+			li 
+			{
+				position: relative;
+				margin: 1em 0 2em;
+				padding-left: 60px;
+				@include text-shadow(0, 0, 5px, $blanc);
+				width: 66%;
+				
+				&::before
+				{
+					position: absolute; top: 0; top: calc(50% - 20px); left: 0;
+					display: block;
+					@include border-radius(.33em);
+					color: $blanc;
+					font-family: $labeur;
+					font-size: 30px;
+					font-weight: 700;
+					height: 40px;
+					line-height: 43px;
+					text-align: center;
+					width: 40px;
+				}
+				
+				&:nth-of-type(odd)
+				{
+					margin-left: 10%;
+				}
+				
+				&:nth-of-type(even)
+				{
+					margin-left: 33%;
+				}
+				
+				&:nth-of-type(even)::before
+				{
+					background-color: $bleu; 
+					@include text-shadow(0, 0, 15px, $blanc);
+				}
+				&:nth-of-type(odd)::before
+				{ 
+					background-color: $orange; 
+					@include text-shadow(0, 0, 15px, $blanc);
+				}
+				
+				&:nth-of-type(1)::before { content: '1'; }
+				&:nth-of-type(2)::before { content: '2'; }
+				&:nth-of-type(3)::before { content: '3'; }
+				&:nth-of-type(4)::before { content: '4'; }
+				&:nth-of-type(5)::before { content: '5'; }
+			}
 		}
     }
 }
