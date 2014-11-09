@@ -5,8 +5,31 @@
  */
 
 
+// Définition des variables de couleur
+$noir:    rgba(  0,   0,   0, 1);
+$blanc:   rgba(255, 255, 255, 1);
+$bleu:    rgba(  0, 115, 168, 1);
+$orange:  rgba(226, 133,   0, 1);
+
+
 // Mise en place des webfonts
 $labeur:  'Fira Sans', 'Helvetica', 'Arial', sans-serif;
 $hiwelo:  'Grand Hotel', cursive;
 $titrage: 'Lato', 'Helvetica', 'Arial', sans-serif;
 $icofont: 'fontello';
+
+
+// Données globales de style
+
+html,
+body,
+main,
+section
+{
+	height: 100%;
+}
+
+
+// Import des fichiers relatifs aux sections du minisite
+
+@import url('home.scss'); // section .home
