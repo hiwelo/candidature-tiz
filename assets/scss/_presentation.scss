@@ -20,21 +20,14 @@
 	.container
 	{
 		position: relative;
-		height: 100%;
 		margin: 0 auto;
 		padding: 100px 150px;
 		width: 1400px;
 		
-		@media all and (min-height: 1000px)
-		{
-			position: absolute; top: calc(50% - 500px); left: calc(50% - 700px);
-			height: 1000px;
-		}
-		
 		img.profil
 		{
 			position: absolute; top: 125px; right: 150px;
-			border: 6px solid $grisFonce;
+			border: 8px solid $bleu;
 			@include border-radius(50%);
 			height: 250px;
 			width: 250px;
@@ -42,7 +35,7 @@
 			
 			&:hover
 			{
-				border-color: $bleu;
+				border-color: $tiz;
 			}
 		}
 		
@@ -74,7 +67,7 @@
 				font-size: 1.25em;
 				font-weight: 300;
 				line-height: 1.5em;
-				padding: .3em .6em .15em;
+				padding: .2em .6em .15em;
 				z-index: 100;
 			}
 			
@@ -153,18 +146,6 @@
 						@include rotate(45deg);
 					}
 					
-					@media all and (min-height: 1000px)
-					{
-						bottom: auto;
-						top: 50px;
-						
-						&::before
-						{
-							bottom: auto;
-							top: -10px;
-						}
-					}
-					
 					strong
 					{
 						display: block;
@@ -201,6 +182,7 @@
 						font-size: 1.25em;
 						font-style: normal;
 						font-weight: 300;
+						letter-spacing: .025em;
 						padding: 0;
 						padding-top: 1em;
 						text-align: center;
@@ -213,6 +195,17 @@
 					display: block;
 				}
 			}
+		}
+	}
+	
+	.suivant
+	{
+		&::before
+		{
+			border-color: $bleu;
+			color: $bleu;
+			-webkit-animation: boutonSuivant 3s ease-in-out infinite;
+			animation: boutonSuivant 3s ease-in-out infinite;
 		}
 	}
 }
