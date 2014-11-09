@@ -20,33 +20,54 @@
 	.container
 	{
 		position: relative;
+		height: 100%;
 		margin: 0 auto;
 		padding: 100px 150px;
-		width: 1400px;
+		width: 85%;
+		
+		@media all and (min-height: 1000px)
+		{
+			position: absolute; top: calc(50% - 500px); left: calc(50% - 700px);
+			height: 1000px;
+		}
+		
+		@media all and (max-width: 1400px)
+		{
+    		padding: 100px 50px;
+		}
 		
 		img.profil
 		{
-			position: absolute; top: 125px; right: 150px;
-			border: 8px solid $bleu;
+			position: absolute; top: 85px; right: 150px;
+			border: 6px solid $grisFonce;
 			@include border-radius(50%);
 			height: 250px;
 			width: 250px;
-			@include transition(all);
+			@include transition-long(all);
+			
+			@media (max-width: 1400px)
+			{
+    			display: none;
+			}
 			
 			&:hover
 			{
-				border-color: $tiz;
+				border-color: $bleu;
+				@include profile();
 			}
 		}
 		
-		h1 { padding-right: 300px; }
-		
-		p { padding-right: 315px; }
+		@media (min-width: 1400px)
+		{
+    		h1 { padding-right: 300px; }
+    		
+    		p { padding-right: 315px; }
+		}
 		
 		ul.timeline
 		{
 			position: relative;
-			background-color: $bleu;
+			background-color: $tiz;
 			@include border-radius(.33em);
 			list-style: none;
 			height: 15px;
@@ -60,14 +81,14 @@
 			{
 				position: absolute; bottom: 0;
 				display: block;
-				background-color: $bleu;
+				background-color: $tiz;
 				color: $blanc;
 				cursor: default;
 				font-family: $titrage;
 				font-size: 1.25em;
 				font-weight: 300;
 				line-height: 1.5em;
-				padding: .2em .6em .15em;
+				padding: .3em .6em .15em;
 				z-index: 100;
 			}
 			
@@ -98,12 +119,12 @@
 				
 				&:hover
 				{
-					background-color: $tiz;
+					background-color: $bleu;
 					
 					&::before
 					{
-						border-color: $tiz;
-						color: $tiz;
+						border-color: $bleu;
+						color: $orange;
 					}
 				}
 				
@@ -112,10 +133,10 @@
 					position: absolute; top: -13px; left: calc(50% - 20px);
 					display: block;
 					background-color: $blanc;
-					border: 5px solid $bleu;
+					border: 5px solid $tiz;
 					@include border-radius(50%);
 					@include box-sizing();
-					color: $bleu;
+					color: $orange;
 					content: '\e802';
 					cursor: default;
 					font-family: $icofont;
@@ -144,6 +165,18 @@
 						height: 20px;
 						width: 20px;
 						@include rotate(45deg);
+					}
+					
+					@media all and (min-height: 1000px)
+					{
+						bottom: auto;
+						top: 50px;
+						
+						&::before
+						{
+							bottom: auto;
+							top: -10px;
+						}
 					}
 					
 					strong
@@ -182,7 +215,6 @@
 						font-size: 1.25em;
 						font-style: normal;
 						font-weight: 300;
-						letter-spacing: .025em;
 						padding: 0;
 						padding-top: 1em;
 						text-align: center;
@@ -195,17 +227,6 @@
 					display: block;
 				}
 			}
-		}
-	}
-	
-	.suivant
-	{
-		&::before
-		{
-			border-color: $bleu;
-			color: $bleu;
-			-webkit-animation: boutonSuivant 3s ease-in-out infinite;
-			animation: boutonSuivant 3s ease-in-out infinite;
 		}
 	}
 }

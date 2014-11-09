@@ -10,7 +10,6 @@
 	background-image: url('../img/escheresque_ste.png');
 	background-position: center center;
 	background-repeat: repeat;
-	height: 100%;
 	
 	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
 	{
@@ -144,13 +143,6 @@
 		{
 			-webkit-animation: boutonSuivant 3s ease-in-out infinite;
 			animation: boutonSuivant 3s ease-in-out infinite;
-			@include transition(all);
-		}
-		
-		&:hover::before
-		{
-			border-color: $orange;
-			color: $orange;
 		}
 	}
 }

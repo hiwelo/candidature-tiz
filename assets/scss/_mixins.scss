@@ -42,9 +42,16 @@
 
 @mixin transition-long($property)
 {
-	-webkit-transition: $property 1s ease-in-out;
-	-moz-transition: $property 1s ease-in-out;
-	transition: $property 1s ease-in-out;
+	-webkit-transition: $property .66s ease-in-out;
+	-moz-transition: $property .66s ease-in-out;
+	transition: $property .66s ease-in-out;
+}
+
+@mixin transition-tlong($property)
+{
+	-webkit-transition: $property 2s ease-in-out;
+	-moz-transition: $property 2s ease-in-out;
+	transition: $property 2s ease-in-out;
 }
 
 @mixin box-sizing {
@@ -124,5 +131,13 @@
 	-webkit-background-size: $size;
 	-moz-background-size: $size;
 	background-size: $size;
+}
+
+@mixin profile
+{
+	-webkit-transform: rotate(360deg) scale(1.15);
+	-moz-transform: rotate(360deg) scale(1.15);
+	-ms-transform: rotate(360deg) scale(1.15);
+	transform: rotate(360deg) scale(1.15);
 }
 

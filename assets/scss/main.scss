@@ -133,6 +133,7 @@ section
 {
 	position: relative;
 	background-color: transparent;
+	min-height: 100%;
 	width: 100%;
 	@include transition(all);
 }
@@ -175,3 +176,4 @@ section
 
 @import 'home.scss'; // section .home
 @import 'presentation.scss'; // section .presentation
+@import 'opportunite.scss'; // section .opportunites
