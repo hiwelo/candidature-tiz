@@ -6,10 +6,12 @@
 
 
 // Définition des variables de couleur
-$noir:    rgba(  0,   0,   0, 1);
-$blanc:   rgba(255, 255, 255, 1);
-$bleu:    rgba(  0, 115, 168, 1);
-$orange:  rgba(226, 133,   0, 1);
+$noir:     rgba(  0,   0,   0, 1);
+$blanc:    rgba(255, 255, 255, 1);
+$grisNoir: rgba( 33,  33,  33, 1);
+$bleu:     rgba(  0, 115, 168, 1);
+$orange:   rgba(226, 133,   0, 1);
+$tiz:      rgba( 60, 191, 247, 1);
 
 
 // Mise en place des webfonts
@@ -19,6 +21,10 @@ $titrage: 'Lato', 'Helvetica', 'Arial', sans-serif;
 $icofont: 'fontello';
 
 
+// On importe les mixins pour pouvoir les utiliser dans le code du site
+@import 'mixins.scss';
+
+
 // Données globales de style
 
 html,
@@ -26,10 +32,21 @@ body,
 main,
 section
 {
+	background-color: transparent;
 	height: 100%;
+	width: 100%;
+	@include transition(all);
+}
+
+body
+{
+	background-color: $blanc;
+	@include transition-long(all);
+	
+	&.bleu { background-color: $bleu; }
 }
 
 
 // Import des fichiers relatifs aux sections du minisite
 
-@import url('home.scss'); // section .home
+@import 'home.scss'; // section .home

@@ -6,5 +6,85 @@
 
 .home
 {
+	position: relative;
+	background-attachment: fixed;
+	background-image: url('../img/escheresque_ste.png');
+	background-position: center center;
+	background-repeat: repeat;
 	
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+	{
+		background-image: url('../img/escheresque_ste_@2X.png');
+	}
+	
+	div
+	{
+		position: absolute; top: 35%; top: calc(50% - 127px); left: 0;
+		width: 100%;
+		
+		p 
+		{
+			color: $blanc;
+			font-family: $titrage;
+			font-size: 1.5em;
+			font-weight: 400;
+			line-height: 3em;
+			margin: 0;
+			text-align: center;
+			
+			&.bonjour
+			{
+				font-size: 4.5em;
+				font-weight: 300;
+				letter-spacing: 0.025em;
+				line-height: 2em;
+				opacity: .85;
+				@include text-shadow(1px, 2px, 1px, $grisNoir);
+				
+				strong
+				{
+					color: $tiz;
+					font-weight: 900;
+				}
+			}
+			
+			&.besoin
+			{
+				font-size: 2.25em;
+				font-weight: 300;
+				line-height: 2em;
+				opacity: .85;
+				
+				strong
+				{
+					color: $blanc;
+					font-weight: 400;
+					letter-spacing: .02em;
+				}
+			}
+			
+			&.candidat
+			{
+				font-size: 2.25em;
+				font-weight: 300;
+				line-height: 2em;
+				opacity: .85;
+				
+				strong
+				{
+					color: $orange;
+					font-family: $hiwelo;
+					font-size: 1.35em;
+					font-weight: 400;
+					padding-right: .15em;
+				}
+				
+				span
+				{
+					color: $tiz;
+					font-weight: 900;
+				}
+			}
+		}
+	}
 }
