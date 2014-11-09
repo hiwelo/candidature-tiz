@@ -6,7 +6,6 @@
 
 .home
 {
-	position: relative;
 	background-attachment: fixed;
 	background-image: url('../img/escheresque_ste.png');
 	background-position: center center;
@@ -15,9 +14,10 @@
 	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
 	{
 		background-image: url('../img/escheresque_ste_@2X.png');
+		background-size: 46px 29px;
 	}
 	
-	div
+	.container-central
 	{
 		position: absolute; top: 35%; top: calc(50% - 127px); left: 0;
 		width: 100%;
@@ -30,7 +30,9 @@
 			font-weight: 400;
 			line-height: 3em;
 			margin: 0;
+			opacity: 0;
 			text-align: center;
+			@include transition(all);
 			
 			&.bonjour
 			{
@@ -38,8 +40,15 @@
 				font-weight: 300;
 				letter-spacing: 0.025em;
 				line-height: 2em;
-				opacity: .85;
 				@include text-shadow(1px, 2px, 1px, $grisNoir);
+				-webkit-animation-duration: 2s;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-name: affichageMessage;
+				-webkit-animation-timing-function: ease-in-out;
+				animation-duration: 2s;
+				animation-fill-mode: forwards;
+				animation-name: affichageMessage;
+				animation-timing-function: ease-in-out;
 				
 				strong
 				{
@@ -53,7 +62,16 @@
 				font-size: 2.25em;
 				font-weight: 300;
 				line-height: 2em;
-				opacity: .85;
+				-webkit-animation-delay: 2s;
+				-webkit-animation-duration: 2s;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-name: affichageMessage;
+				-webkit-animation-timing-function: ease-in-out;
+				animation-delay: 2s;
+				animation-duration: 2s;
+				animation-fill-mode: forwards;
+				animation-name: affichageMessage;
+				animation-timing-function: ease-in-out;
 				
 				strong
 				{
@@ -68,15 +86,34 @@
 				font-size: 2.25em;
 				font-weight: 300;
 				line-height: 2em;
-				opacity: .85;
+				-webkit-animation-delay: 4s;
+				-webkit-animation-duration: 2s;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-name: affichageMessage;
+				-webkit-animation-timing-function: ease-in-out;
+				animation-delay: 4s;
+				animation-duration: 2s;
+				animation-fill-mode: forwards;
+				animation-name: affichageMessage;
+				animation-timing-function: ease-in-out;
 				
 				strong
 				{
-					color: $orange;
+					color: $tiz;
 					font-family: $hiwelo;
 					font-size: 1.35em;
 					font-weight: 400;
 					padding-right: .15em;
+					-webkit-animation-delay: 5s;
+					-webkit-animation-duration: 2s;
+					-webkit-animation-fill-mode: forwards;
+					-webkit-animation-name: changerCouleur;
+					-webkit-animation-timing-function: ease-in-out;
+					animation-delay: 5s;
+					animation-duration: 2s;
+					animation-fill-mode: forwards;
+					animation-name: changerCouleur;
+					animation-timing-function: ease-in-out;
 				}
 				
 				span
@@ -85,6 +122,27 @@
 					font-weight: 900;
 				}
 			}
+		}
+	}
+	
+	.suivant
+	{
+		opacity: 0;
+		-webkit-animation-delay: 6s;
+		-webkit-animation-duration: 2s;
+		-webkit-animation-fill-mode: forwards;
+		-webkit-animation-name: affichageMessage;
+		-webkit-animation-timing-function: ease-in-out;
+		animation-delay: 6s;
+		animation-duration: 2s;
+		animation-fill-mode: forwards;
+		animation-name: affichageMessage;
+		animation-timing-function: ease-in-out;
+		
+		&::before
+		{
+			-webkit-animation: boutonSuivant 3s ease-in-out infinite;
+			animation: boutonSuivant 3s ease-in-out infinite;
 		}
 	}
 }
