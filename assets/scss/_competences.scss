@@ -7,15 +7,9 @@
 .competences
 {
 	background-attachment: fixed;
-	background-image: url('../img/shattered.png');
+	background-image: url('../img/geometry2.png');
 	background-position: center center;
 	background-repeat: repeat;
-	
-	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-	{
-		background-image: url('../img/shattered_@2X.png');
-		background-size: 46px 23px;
-	}
 	
     .container
 	{
