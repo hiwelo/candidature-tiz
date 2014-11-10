@@ -1,0 +1,104 @@
+@charset 'utf-8';
+
+/**
+ * Fichier relatif à la section .opportunite
+ */
+
+.competences
+{
+	background-attachment: fixed;
+	background-image: url('../img/pw_maze_white.png');
+	background-position: center center;
+	background-repeat: repeat;
+	
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+	{
+		background-image: url('../img/pw_maze_white_@2X.png');
+		background-size: 46px 23px;
+	}
+	
+    .container
+	{
+		position: relative;
+		height: 100%;
+		margin: 0 auto;
+		padding: 100px 150px;
+		width: 85%;	
+		
+		@media all and (min-height: 1000px)
+		{
+			position: absolute; top: calc(50% - 500px); left: calc(50% - 700px);
+			height: 1000px;
+			width: 1400px;
+		}
+			
+		@media all and (max-width: 1400px)
+		{
+    		padding: 100px 50px;
+		}
+		
+		h1
+		{
+    		strong
+    		{
+	    		color: $bleu;
+        		font-variant: normal;
+    		}
+		}
+		
+		div.colonne
+		{
+			display: inline-block;
+			vertical-align: top;
+			width: 33%;
+		}
+		
+		ul.liste
+		{
+			font-family: $labeur;
+			font-size: 1.5em;
+			line-height: 1.5em;
+			list-style: none;
+			margin: 0 auto 1em;
+			padding: 0;
+			
+			li 
+			{
+				position: relative;
+				color: $grisFonce;
+				margin: 0 auto .33em;
+				padding-left: 40px;
+				
+				&::before
+				{
+					position: absolute; top: 0; left: 0;
+					color: $bleu;
+					font-family: $icofont;
+					font-size: .75em;
+					height: 30px;
+					line-height: 30px;
+					text-align: center;
+					width: 40px;
+				}
+				
+				strong
+				{
+					color: $bleu;
+					font-weight: 300;
+				}
+				
+				span
+				{
+					color: $bleu;
+					font-style: italic;
+					font-weight: 300;
+				}
+			}
+		}
+		
+		ul.interets li::before { content: '\e837'; }
+		ul.technologies li::before { content: '\e864'; }
+		ul.distinctions li::before { content: '\e8ce'; }
+		ul.langues li::before { content: '\e83a'; }
+    }
+}

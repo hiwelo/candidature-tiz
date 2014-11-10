@@ -113,6 +113,25 @@ h1
 	}
 }
 
+h2
+{
+	color: $bleu;
+	font-family: $titrage;
+	font-size: 1.85em;
+	font-weight: 600;
+	letter-spacing: .025em;
+	
+	&::after
+	{
+		display: block;
+		background-color: $orange;
+		content: ' ';
+		height: 3px;
+		margin-top: .15em;
+		width: 40px;
+	}
+}
+
 p
 {
 	color: $grisMoyen;
@@ -177,3 +196,4 @@ section
 @import 'home.scss'; // section .home
 @import 'presentation.scss'; // section .presentation
 @import 'opportunite.scss'; // section .opportunites
+@import 'competences.scss'; // section .competences
