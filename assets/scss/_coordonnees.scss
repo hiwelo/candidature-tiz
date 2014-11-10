@@ -56,6 +56,11 @@
 					letter-spacing: .015em;
 					margin-bottom: 1.15em;
 					padding-left: 50px;
+							
+					@media (max-width: 1200px)
+					{
+						font-size: 1.15em;
+					}
 					
 					&::before
 					{
