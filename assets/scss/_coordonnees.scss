@@ -18,6 +18,12 @@
 		padding: 150px 150px;
 		width: 50%;
 		
+		@media (max-height: 1000px)
+		{
+			padding: 100px 150px;
+			width: 85%;
+		}
+		
 		h1
 		{
 			color: $blanc;
